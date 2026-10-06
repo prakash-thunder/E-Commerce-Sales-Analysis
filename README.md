@@ -1,25 +1,38 @@
-# E-Commerce Sales Analysis
+# 🛒 E-Commerce Sales Analysis
 
-Python, Pandas, and Matplotlib project for exploring and analyzing e-commerce sales data.
+A complete **E-Commerce Sales Analysis project using Python and Pandas**, built on the **USA Sales Product Dataset**. The notebook focuses on cleaning real-world sales data, transforming columns, performing business-oriented analysis, and extracting insights about products, cities, time periods, and customer orders.
 
-## Project Contents
+## 📊 Dataset
 
-- `E_Commerce_Sales_Analysis.ipynb` — Main Jupyter/Colab notebook
-- `README.md` — Project documentation
+**USA Sales Product Dataset**  
+Kaggle: [https://www.kaggle.com/datasets/kushagra1211/usa-sales-product-datasetcleaned](https://www.kaggle.com/datasets/kushagra1211/usa-sales-product-datasetcleaned)
 
-## How to Run
+The dataset contains sales information such as:
 
-1. Upload the notebook to Google Colab or open it in Jupyter Notebook.
-2. Upload/provide the dataset required by the notebook.
-3. Run the cells from top to bottom.
+- Order ID
+- Product
+- Product Type
+- Quantity Ordered
+- Price
+- Order Date
+- Time
+- City
+- Purchase Address
 
-## Tools Used
+## 🔍 What This Project Covers
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
+### 1. Data Loading & Exploration
 
-## Analysis
+- Loaded the sales dataset using **Pandas**.
+- Inspected the dataset using `head()`, `info()`, `describe()`, and `unique()`.
+- Checked the structure and data types of the columns.
+- Removed missing values using `dropna()`.
 
-The notebook contains data cleaning, exploration, aggregation, and visualization of e-commerce sales data.
+### 2. Data Cleaning & Transformation
+
+- Converted the `Price` column from string/object format to numeric values by removing commas.
+- Converted `Order Date` into Pandas datetime format.
+- Created a new **Amount** column:
+
+```text
+Amount = Quantity Ordered × Price
